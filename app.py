@@ -23,9 +23,12 @@ def form():
 def hello3():
     return '안녕 나는 네이버야~'
 
-@app.route('/action_page')
+@app.route('/action_page', method=['GET', 'POST'])
 def action_page():
-    return '나는 액션 페이지야'
+    if request.method == 'GET':
+        return '나는 액션 페이지야'
+    else:
+        return 'POST로 전달'
 
 if __name__ == '__main__':
     app.run()
