@@ -1,19 +1,7 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
-@app.route('/a')
-def hello():
-    return 'Hello, World!aaaaa'
-
-@app.route('/b')
-def hello2():
-    return 'Hello, World!bbbbb'
-
-@app.route('/naver')
-def hello3():
-    return '안녕 나는 네이버야~'
-
-@app.route('/duck')
+@app.route('/')
 def duck():
     return '''
             <!DOCTYPE html>
@@ -31,6 +19,13 @@ def duck():
 def form():
     return render_template('form.html')
 
+@app.route('/naver')
+def hello3():
+    return '안녕 나는 네이버야~'
+
+@app.route('/action_page')
+def action_page():
+    return '나는 액션 페이지야'
 
 if __name__ == '__main__':
     app.run()
