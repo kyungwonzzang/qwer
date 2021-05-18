@@ -23,12 +23,16 @@ def form():
 def hello3():
     return '안녕 나는 네이버야~'
 
-@app.route('/action_page', method=['GET', 'POST'])
+@app.route('/action_page', methods=['GET', 'POST'])
 def action_page():
     if request.method == 'GET':
         return '나는 액션 페이지야'
     else:
-        return 'POST로 전달'
+        search = request.form['search']
+        return '''당신은 "{}"로 검색을 했습니다.
+        결과를 보여드리겠습니다. 잠시만 기다려주세요.
+        리스트 쫙~~~~
+        '''.format(search)
 
 if __name__ == '__main__':
     app.run()
