@@ -29,10 +29,14 @@ def action_page():
         return '나는 액션 페이지야'
     else:
         search = request.form['search']
-        return '''당신은 "{}"로 검색을 했습니다.
-        결과를 보여드리겠습니다. 잠시만 기다려주세요.
+        return '''당신은 "{}"로 검색을 했습니다.</br>
+        결과를 보여드리겠습니다. 잠시만 기다려주세요.</br>
         리스트 쫙~~~~
         '''.format(search)
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 if __name__ == '__main__':
     app.run()
