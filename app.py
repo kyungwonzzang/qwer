@@ -34,9 +34,10 @@ def action_page():
         리스트 쫙~~~~
         '''.format(search)
 
-@app.route('/login')
-def login():
-    return render_template('login.html')
+@app.route('/login', methods=['LOGIN'])
+def action_page():
+    if request.method == 'LOGIN':
+        return '로그인중입니다.'
 
 if __name__ == '__main__':
     app.run()
