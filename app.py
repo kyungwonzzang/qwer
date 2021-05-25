@@ -34,13 +34,13 @@ def action_page():
         리스트 쫙~~~~
         '''.format(search)
 
-@app.route('/login', methods=['LOGIN'])
-def action_page():
-    if request.method == 'LOGIN':
-        return '로그인중입니다.'
+@app.route('/join')
+def join():
+    return render_template('join.html')
 
 if __name__ == '__main__':
     app.run()
+
 # 웹브라우저에 http://127.0.0.1:5000/naver
 # 위와같이 접속 하면 안녕 나는 네이버야~
 # 라는 글자가 나타나게 하기
