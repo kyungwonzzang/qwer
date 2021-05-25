@@ -21,4 +21,10 @@ def coin(m):
     print("내 돈은 {0}".format(m))
 
 # mym = coin(1000)
-# print("내 돈은 {0}".format(mym))
+# print("내 돈은 {0}".format(mym)).
+
+def ck_idpw(id, pw):
+    if id == 'a' and pw == '123':
+        return '로그인 성공'
+    else:
+        return '로그인 실패'

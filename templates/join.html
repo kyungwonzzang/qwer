@@ -4,11 +4,15 @@
 
 <h2>회원가입</h2>
 
-<form action="/join_action">
-  <label for="userid">아이디 :</label><br>
+<form action="/join_action" method="POST"> 
+  <label for="id">아이디 :</label><br>
   <input type="text" id="id" name="id"><br>
-  <label for="password">패스워드:</label><br>
-  <input type="text" id="pwd" name="pwd"><br><br>
+  <label for="pd">패스워드 :</label><br>
+  <input type="text" id="pw" name="pw"><br>
+  <label for="name">이름 :</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="password">전화번호 :</label><br>
+  <input type="text" id="phone" name="phone"><br>
   
   <input type="submit" value="회원가입">
 </form> 
