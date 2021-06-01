@@ -5,17 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def duck():
-    return '''
-            <!DOCTYPE html>
-                <html>
-                <body>
-
-                <h2>최예나</h2>
-                <img src="https://newsimg.hankookilbo.com/cms/articlerelease/2021/02/07/76990007-7d18-4c56-8f89-e082ad68dd35.jpg" alt="Trulli" width="500" height="333">
-
-                </body>
-                </html>
-            '''
+    return render_template('main.html')
 
 @app.route('/form')
 def form():
@@ -24,6 +14,10 @@ def form():
 @app.route('/naver')
 def hello3():
     return '안녕 나는 네이버야~'
+
+@app.route('/coin')
+def coin():
+    return render_template('coin.html')
 
 @app.route('/action_page', methods=['GET', 'POST'])
 def action_page():
