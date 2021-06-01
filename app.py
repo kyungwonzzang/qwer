@@ -1,6 +1,8 @@
 from types import MethodDescriptorType
 from flask import Flask, request, render_template
 from func import ck_idpw # 내가 만든 id pw 체크함수
+import db
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -39,11 +41,13 @@ def join_action():
     if request.method == 'GET':
         return '나는 액션 페이지야'
     else:
-        userid = request.form['userid']
+        userid = request.form['id']
         pwd = request.form['pwd']
         name = request.form['name']
         phone = request.form['phone']
         print(userid, pwd, name, phone)
+        # 디비에 데이터 넣기
+        db.insert_user(userid, pwd, name, phone)
         return '회원가입 성공!!'
 
 
