@@ -59,7 +59,8 @@ def login():
         id = request.form['id']
         pw = request.form['pw']
         print(id,pw)
-        return ck_idpw(id, pw)
+        ret = db.get_idpw(id, pw)
+        return ck_idpw(ret)
 
 if __name__ == '__main__':
     app.run()
