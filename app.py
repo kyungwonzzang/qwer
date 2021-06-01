@@ -1,9 +1,11 @@
 from types import MethodDescriptorType
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, session, redirect
+from werkzeug.utils import redirect
 from func import ck_idpw # 내가 만든 id pw 체크함수
 import db
 
 app = Flask(__name__)
+app.secret_key = b'aaa!111/'
 
 @app.route('/')
 def duck():
@@ -19,7 +21,17 @@ def hello3():
 
 @app.route('/coin')
 def coin():
-    return render_template('coin.html')
+    #return render_template('coin.html')
+    if 'user' in session:
+        return '여기는 코인 거래소 사용자만'
+    else:
+        return redirect('/login') # 페이지 강제 이동
+
+# 로그아웃(session 제거)
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    return redirect('/')
 
 @app.route('/action_page', methods=['GET', 'POST'])
 def action_page():
@@ -60,6 +72,8 @@ def login():
         pw = request.form['pw']
         print(id,pw)
         ret = db.get_idpw(id, pw)
+        if ret != None:
+            session['user'] = ret[3] # 로그인 처리
         return ck_idpw(ret)
 
 if __name__ == '__main__':
