@@ -17,9 +17,9 @@ def insert_user(userid, pw, name, phone):
 def get_idpw(userid, pw):
     ret = ()
     try:
-        db = pymysql.connect(host='127.0.0.1',
-                   user='root', password='1234',
-                   db='taxidb', charset='utf8')
+        db = pymysql.connect(host='ruddnjs5547.mysql.pythonanywhere-services.com',
+                   user='ruddnjs5547', password='12345678',
+                   db='ruddnjs5547$mydb', charset='utf8')
         c = db.cursor()
         setdata = (userid, pw)
         db.get_idpw(userid, pw)
