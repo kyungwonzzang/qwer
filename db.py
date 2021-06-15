@@ -2,9 +2,9 @@ import pymysql
 
 def insert_user(userid, pw, name, phone):
     try:
-        db = pymysql.connect(host='127.0.0.1',
-                   user='root', password='1234',
-                   db='taxidb', charset='utf8')
+        db = pymysql.connect(host='ruddnjs5547.mysql.pythonanywhere-services.com',
+                   user='ruddnjs5547', password='12345678',
+                   db='ruddnjs5547$mydb', charset='utf8')
         c = db.cursor()
         setdata = (userid, pw, name, phone)
         c.execute("INSERT INTO user_tb (id, pw, name, phone)  VALUES (%s, %s, %s, %s)", setdata)
