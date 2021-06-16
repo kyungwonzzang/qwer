@@ -4,7 +4,7 @@ import pymysql
 def insert_user(userid, pw, name, phone):
     try:
         db = pymysql.connect(host='ruddnjs5547.mysql.pythonanywhere-services.com',
-                   user='ruddnjs5547', password='asd123465',
+                   user='ruddnjs5547', password='asd123456',
                    db='ruddnjs5547$mydb', charset='utf8')
         c = db.cursor()
         setdata = (userid, pw, name, phone)
@@ -18,7 +18,7 @@ def insert_user(userid, pw, name, phone):
 def get_idpw(userid, pw):
     ret = ()
     try:
-        db = pymysql.connect(host='mhj7682.mysql.pythonanywhere-services.com',
+        db = pymysql.connect(host='ruddnjs5547.mysql.pythonanywhere-services.com',
                    user='ruddnjs5547', password='asd123456',
                    db='ruddnjs5547$mydb', charset='utf8')
         c = db.cursor()
