@@ -22,7 +22,7 @@ def get_idpw(userid, pw):
                    db='duckdb', charset='utf8')
         c = db.cursor()
         setdata = (userid, pw)
-        db.get_idpw(userid, pw)
+        # db.get_idpw(userid, pw)
         c.execute("SELECT * FROM user_tb WHERE id = %s AND pw = %s", setdata)
         ret = c.fetchone()
         #print(ret)
@@ -31,5 +31,3 @@ def get_idpw(userid, pw):
     finally:
         db.close()
     return ret
-
-#get_idpw('aaaa', '123')

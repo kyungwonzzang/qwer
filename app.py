@@ -54,7 +54,7 @@ def join_action():
         return '나는 액션 페이지야'
     else:
         userid = request.form['id']
-        pwd = request.form['pw']
+        pwd = request.form['pwd']
         name = request.form['name']
         phone = request.form['phone']
         print(userid, pwd, name, phone)
@@ -69,12 +69,12 @@ def login():
         return render_template('login.html')
     else:
         id = request.form['id']
-        pw = request.form['pw']
+        pw = request.form['pwd']
         print(id,pw)
-        ret = db.get_idpw(id, pw)
+        ret = db.get_idpw(id, pwd)
         if ret != None:
             session['user'] = ret[3] # 로그인 처리
         return ck_idpw(ret)
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
