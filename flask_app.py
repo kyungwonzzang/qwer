@@ -19,9 +19,9 @@ def form():
 def hello3():
     return '안녕 나는 네이버야~'
 
-@app.route('/coin')
-def coin():
-    #return render_template('coin.html')
+@app.route('/duck')
+def duck():
+    #return render_template('duck.html')
     if 'user' in session:
         return '여기는 코인 거래소 사용자만'
     else:

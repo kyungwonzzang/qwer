@@ -19,11 +19,14 @@ def form():
 def hello3():
     return '안녕 나는 네이버야~'
 
-@app.route('/coin')
-def coin():
-    #return render_template('coin.html')
-    if 'user' in session:
-        return '여기는 코인 거래소 사용자만'
+@app.route('/duck')
+def duck():
+    if 'user' in session:    
+        return render_template('duck.html')
+
+    # if 'user' in session:
+    #     return '여기는 코인 거래소 사용자만'
+    
     else:
         return redirect('/login') # 페이지 강제 이동
 
