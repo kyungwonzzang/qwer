@@ -1,4 +1,3 @@
-
 import pymysql
 
 def insert_user(userid, pw, name, phone):
