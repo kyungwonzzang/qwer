@@ -53,7 +53,7 @@ def join_action():
     if request.method == 'GET':
         return '나는 액션 페이지야'
     else:
-        userid = request.form['id']
+        userid = request.form['userid']
         pwd = request.form['pwd']
         name = request.form['name']
         phone = request.form['phone']
@@ -65,13 +65,13 @@ def join_action():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method =='GET':
+    if request.method == 'GET':
         return render_template('login.html')
     else:
-        id = request.form['id']
-        pw = request.form['pwd']
-        print(id,pw)
-        ret = db.get_idpw(id, pwd)
+        userid = request.form['userid']
+        pwd = request.form['pwd']
+        print(userid, pwd)
+        ret = db.get_idpw(userid, pwd)
         if ret != None:
             session['user'] = ret[3] # 로그인 처리
         return ck_idpw(ret)
