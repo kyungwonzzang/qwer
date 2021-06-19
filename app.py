@@ -8,9 +8,9 @@ app.secret_key = b'aaa!111/'
 
 def ck_idpw(ret):
     if ret != None:
-        return render_template ('/')
+        return render_template ('loginsuccess.html')
     else:
-        return render_template ('/loginfail')
+        return render_template ('loginfail.html')
 
 @app.route('/')
 def main():
@@ -21,17 +21,6 @@ def main():
 def logout():
     session.pop('user', None)
     return redirect('/')
-
-@app.route('/action_page', methods=['GET', 'POST'])
-def action_page():
-    if request.method == 'GET':
-        return '나는 액션 페이지야'
-    else:
-        search = request.form['search']
-        return '''당신은 "{}"로 검색을 했습니다.</br>
-        결과를 보여드리겠습니다. 잠시만 기다려주세요.</br>
-        리스트 쫙~~~~
-        '''.format(search)
 
 @app.route('/join')
 def join():

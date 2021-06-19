@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>YenaTube</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </head>
+<html lang="en">
+<head>
+    <title>오리 Main</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
@@ -56,58 +59,103 @@
     </nav>
 
     <div class="alert alert-success">
-        <strong>로그인 성공 !</strong>&nbsp;&nbsp;&nbsp;회원전용 페이지입니다.
+      <strong>로그인 성공 !</strong>&nbsp;&nbsp;&nbsp;
     </div>
 
-      <div class="mx-auto order-0" style="text-align:center;">
+      <div class="mx-auto order-0 ;" style="text-align:center;">
 
-        <div style="background-color : #f0f0f0;">
-            <br/>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/k0GzoxASxqA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-            <br/><br/>
-        </div>
-            
-        <div class="bg-dark" height="100">
-            <br>
-            <table align="center" class = "text-white">
+        <div id="demo" class="carousel slide bg-dark" data-ride="carousel">
+
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+          
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src={{ url_for('static', filename='img/yena1.png') }} height="450" alt="yena1">
+              </div>
+              <div class="carousel-item">
+                <img src={{ url_for('static', filename='img/yena2.jpg') }} height="450" alt="yena1">
+              </div>
+              <div class="carousel-item">
+                <img src={{ url_for('static', filename='img/yena3.jpg') }} height="450" alt="yena1">
+              </div>
+            </div>
+          
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+
+        <div class="bg-dark">
+            <table align="center" height="200" class = "text-white">
                 <thead>
                     <th>
-                        <h2> 아는형님 </h2>
+                        <br/>
+                        <h3> 오리 사진전 </h3>
                         <br/>
                     </th>
                 </thead>
             </table>
-       </div>
-
-       <div class="mx-auto order-0" style="text-align:center;">
-
-        <div style="background-color : #f0f0f0;">
-            <br/>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/Hxmg_sUqMNs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-            <br/><br/>
         </div>
-            
-        <div class="bg-dark" height="100">
-            <br>
-            <table align="center" class = "text-white">
-                <thead>
-                    <th>
-                        <h2> 놀라운 토요일 - 호구들의 감빵생활 </h2>
+
+        <div style="background-color: #6bff72;">
+            <table align="center" height="50" class = "text-dark">
+                <tbody>
+                    <td>
                         <br/>
-                    </th>
-                </thead>
+                        <form method="get" action="http://search.naver.com/search.naver">
+                            <div class="for-group">
+                                <font size="4">NAVER </font>&nbsp;
+                                <input name="naver">&nbsp;
+                                <input type="submit" value="Search">
+                            </div>
+                       </form>
+                        <br/>
+                    </td>
+                </tbody>
             </table>
-       </div>
-        
-        <div >
+        </div>
+
+        <div style="background-color: #e4e4e4;">
+            <table align="center" height="50" class = "text-dark">
+                <tbody>
+                    <td>
+                        <br/>
+                        <form method="get" action="http://www.google.co.kr/search" target="_blank">
+                            <div class="for-group">
+                                <font size="4">Google </font>&nbsp;
+                                <input type=text name=q  />&nbsp;
+                                <input type=submit name=btnG value="Search" /> 
+                            </div>
+                       </form>
+                        <br/>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <table align="center" height="500">
+                <td>
+                    가나다라마바사
+                </td>
+            </table>
+        </div>
+
+        <div style="text-align: center;" >
             <p class="bg-light text-dark">
                 <br> &nbsp;&nbsp; © 2021. Min-GyeongWon_20160958 All Rights Reserved. <br> <br>
             </p>
-        </div>
-          
-      </div>
+          </div>
 
 </body>
+
+
 </html>
