@@ -58,9 +58,9 @@
         </div>
     </nav>
 
-      <div class="mx-auto order-0" style="text-align:center;">
+      <div class="mx-auto order-0 ;" style="text-align:center;">
 
-        <div id="demo" class="carousel slide" data-ride="carousel">
+        <div id="demo" class="carousel slide bg-dark" data-ride="carousel">
 
             <!-- Indicators -->
             <ul class="carousel-indicators">
@@ -75,10 +75,10 @@
                 <img src={{ url_for('static', filename='img/yena1.png') }} height="450" alt="yena1">
               </div>
               <div class="carousel-item">
-                <img src={{ url_for('static', filename='img/yena1.png') }} height="450" alt="yena1">
+                <img src={{ url_for('static', filename='img/yena2.jpg') }} height="450" alt="yena1">
               </div>
               <div class="carousel-item">
-                <img src={{ url_for('static', filename='img/yena1.png') }} height="450" alt="yena1">
+                <img src={{ url_for('static', filename='img/yena3.jpg') }} height="450" alt="yena1">
               </div>
             </div>
           
@@ -102,7 +102,7 @@
                 <thead>
                     <th>
                         <br/>
-                        <h3> 검색하세요 !! </h3>
+                        <h3> 오리 사진전 </h3>
                         <br/>
                     </th>
                 </thead>
@@ -135,8 +135,8 @@
                         <form method="get" action="http://www.google.co.kr/search" target="_blank">
                             <div class="for-group">
                                 <font size="4">Google </font>&nbsp;
-                                <input type=text name=q  /> <!-- 구글 검색 입력 창 -->
-                                <input type=submit name=btnG value="Search" /> <!-- 검색 버튼 -->
+                                <input type=text name=q  />&nbsp;
+                                <input type=submit name=btnG value="Search" /> 
                             </div>
                        </form>
                         <br/>
