@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JoYuri'z</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/duck">회원전용</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ipduck">입Duck</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/joyuriz">조유리즈</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      조유리즈 멤버
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/joyuriz1">최예나</a>
+                      <a class="dropdown-item" href="/joyuriz2">김채원</a>
+                      <a class="dropdown-item" href="/joyuriz3">조유리</a>
+                    </div>
+                </li>      
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="/">오리 &nbsp;<img src={{ url_for('static', filename='img/homeyena1.png') }} width="50" height="50">&nbsp;예나</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/join">회원가입</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="mx-auto order-0" style="text-align:center;">
+
+        <div style="background-color : #f0f0f0;">
+            <br/>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/_NKiGKV8fY4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            <br/><br/>
+        </div>
+            
+        <div class="bg-dark">
+            <br>
+            <table align="center" height="600" class = "text-white">
+                <thead>
+                    <th>
+                        <br/>
+                        <h2> 조유리즈 </h2>
+                    </th>
+                </thead>
+                <tbody>
+                    <td>
+                        누군지 모르면 일단 조유리. 기자들이 만든 특이한 조합으로 시작하였으나<br/>
+                        지금은 팀과 소속사에서도 인정받는 공식 유닛으로 발전했다.<br/><br/>
+
+                        <a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EC%B5%9C%EC%98%88%EB%82%98&oquery=html+%ED%91%9C+%EC%A4%91%EC%95%99%EC%A0%95%EB%A0%AC&tqi=hK19Wdp0YihssTDxlKCssssss7h-489069">
+                        최예나</a>, 
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjky&pkid=1&os=8720879&qvt=0&query=%EC%95%84%EC%9D%B4%EC%A6%88%EC%9B%90%20%EA%B9%80%EC%B1%84%EC%9B%90">
+                        김채원</a>, 
+                        <a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EC%A1%B0%EC%9C%A0%EB%A6%AC&oquery=%EC%95%84%EC%9D%B4%EC%A6%88%EC%9B%90+%EA%B9%80%EC%B1%84%EC%9B%90&tqi=hK1%2F1sp0JXVss7%2F8ResssssstFw-381219">
+                        조유리
+                        </a>
+
+                        이 셋을 헷갈려 헤드라인에<br/>
+                        이름을 틀리는 기자들의 실수가 누적되어 일종의 밈이 됐다.<br/>
+                        최근 기사를 보면 이제는 아예 조유리즈를 기사 제목으로 직접 언급함으로써<br/>
+                        기자들도 이 밈을 적극 활용하고 있다는 것이 밝혀졌다.<br/>
+                        아이돌 오타쿠로 유명한 이정범(일명 럽정범) 기자가 구분하는 법에 대한 기사를 쓰기도 했다.<br/>
+                        # 재미있는 것은, 조유리의 이름을 대표로 하고 있으나 정작 조유리 본인조차<br/>
+                        백종원의 골목식당 홍은동 편 출연 당시 예고편에서 '최예나'로 소개된 적이 있다는 것이다.<br/>
+                        # 그만큼 이 셋에게 비슷한 느낌을 받는 사람들이 많은 듯하며,<br/>
+                        순간적인 각도나 표정에 따라서는 팬들조차 헷갈리고, 멤버도 헷갈리고,<br/>
+                        오죽하면 본인들마저도 헷갈릴 정도로 흡사할 때가 있다.<br/> 
+                        합.체 본인들도 이 밈을 알고 있으며 에너지 캠에서부터<br/>
+                        본격적으로 유튜브 아이콘 권력 다툼이 시작되었다.<br/><br/><br/>
+
+                        <button type="button" class="btn btn-light" onclick = "location.href = 'https://www.youtube.com/results?search_query=%EC%A1%B0%EC%9C%A0%EB%A6%AC%EC%A6%88'" />
+                        다른 동영상 보러가기 </button>
+                           
+                    </td>
+                </tbody>
+            </table>
+       </div>
+        
+        <div >
+            <p class="bg-light text-dark">
+                <br> &nbsp;&nbsp; © 2021. Min-GyeongWon_20160958 All Rights Reserved. <br> <br>
+            </p>
+        </div>
+          
+      </div>
+      
+
+</body>
+</html>

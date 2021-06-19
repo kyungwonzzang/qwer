@@ -8,27 +8,8 @@ app = Flask(__name__)
 app.secret_key = b'aaa!111/'
 
 @app.route('/')
-def duck():
+def main():
     return render_template('main.html')
-
-@app.route('/form')
-def form():
-    return render_template('form.html')
-
-@app.route('/naver')
-def hello3():
-    return '안녕 나는 네이버야~'
-
-@app.route('/duck')
-def duck():
-    if 'user' in session:    
-        return render_template('duck.html')
-
-    # if 'user' in session:
-    #     return '여기는 코인 거래소 사용자만'
-    
-    else:
-        return redirect('/login') # 페이지 강제 이동
 
 # 로그아웃(session 제거)
 @app.route('/logout')
@@ -63,7 +44,7 @@ def join_action():
         print(userid, pwd, name, phone)
         # 디비에 데이터 넣기
         db.insert_user(userid, pwd, name, phone)
-        return '회원가입 성공!!'
+        return render_template('joinsuccess.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -78,6 +59,40 @@ def login():
         if ret != None:
             session['user'] = ret[3] # 로그인 처리
         return ck_idpw(ret)
+
+@app.route('/duck')
+def duck():
+    # if 'user' in session:    
+    #     return render_template('duck.html')
+    if 'user' in session:
+        return '여기는 회원만'
+    else:
+        return redirect('/login') # 페이지 강제 이동
+
+
+@app.route('/ipduck')
+def ipduck():
+    return render_template('ipduck.html')
+
+@app.route('/test/')
+def test():
+    return render_template('test.html')
+
+@app.route('/joyuriz')
+def joyuriz():
+    return render_template('joyuriz.html')
+
+@app.route('/joyuriz1')
+def joyuriz1():
+    return render_template('joyuriz1.html')
+
+@app.route('/joyuriz2')
+def joyuriz2():
+    return render_template('joyuriz2.html')
+
+@app.route('/joyuriz3')
+def joyuriz3():
+    return render_template('joyuriz3.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

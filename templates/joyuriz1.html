@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>예나위키</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/duck">회원전용</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ipduck">입Duck</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/joyuriz">조유리즈</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      조유리즈 멤버
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/joyuriz1">최예나</a>
+                      <a class="dropdown-item" href="/joyuriz2">김채원</a>
+                      <a class="dropdown-item" href="/joyuriz3">조유리</a>
+                    </div>
+                </li>      
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="/">오리 &nbsp;<img src={{ url_for('static', filename='img/homeyena1.png') }} width="50" height="50">&nbsp;예나</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/join">회원가입</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+      <div class="mx-auto order-0" style="text-align:center;">
+
+        <div style="background-color : #f0f0f0;">
+            <br/>
+            <img src={{ url_for('static', filename='img/yena2_p.jpg') }} height="450" >
+            <br/><br/>
+        </div>
+            
+        <div align="center" class="bg-dark" >
+            <br><br>
+            <table border style="background-color: white; border:2px solid #fcf695;">
+                <tr>
+                    <td style="text-align: center; font-weight: bold; background-color: #fcf695;" width="100;" height="40; ">
+                        이름
+                    </td style="text-align:left">
+                    <td width="500;">&nbsp;
+                        최예나 / Choi Yena
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; font-weight: bold; background-color: #fcf695;" width="100;" height="40; ">
+                        출생
+                    </td style="text-align:left">
+                    <td width="500;">&nbsp;
+                        1999년 9월 29일 (21세)
+                    </td>
+                </tr>            
+                <tr>
+                    <td style="text-align: center; font-weight: bold; background-color: #fcf695;" width="100;" height="40; ">
+                        국적
+                    </td style="text-align:left">
+                    <td width="500;">&nbsp;
+                        대한민국
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; font-weight: bold; background-color: #fcf695;" width="100;" height="40; ">
+                        데뷔
+                    </td style="text-align:left">
+                    <td width="500;">&nbsp;
+                        2018년 IZ*ONE 미니 1집 COLOR*IZ
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; font-weight: bold; background-color: #fcf695;" width="100;" height="40; ">
+                        별명
+                    </td style="text-align:left">
+                    <td width="500;">&nbsp;
+                        오리, 달콤언니, 최허세, 크림빵, 간장마미, 옌오리, 예나리, 옌
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; font-weight: bold; background-color: #fcf695;" width="100;" height="40; ">
+                        학력
+                    </td style="text-align:left">
+                    <td width="500;">&nbsp;
+                        한림연예예술고등학고 (연예과/졸업)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; font-weight: bold; background-color: #fcf695;" width="100;" height="40; ">
+                        취미
+                    </td style="text-align:left">
+                    <td width="500;">&nbsp;
+                        영화 보기
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; font-weight: bold; background-color: #fcf695;" width="100;" height="40; ">
+                        특기
+                    </td style="text-align:left">
+                    <td width="500;">&nbsp;
+                        인형뽑기, 게임
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; font-weight: bold; background-color: #fcf695;" width="100;" height="60; ">
+                        SNS
+                    </td style="text-align:left">
+                    <td width="500;">
+                        &nbsp;
+                        <button type="button" class="btn btn-primary" onclick = "location.href = 'https://twitter.com/YENA_OFFICIAL'" />
+                        Twitter </button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn btn-danger" onclick = "location.href = 'https://www.instagram.com/yena.jigumina/'" />
+                        Instagram </button>
+                    </td>
+                </tr>
+            </table>
+            <br/><br/>
+            <button type="button" class="btn btn-light" onclick = "location.href = 'https://namu.wiki/w/%EC%B5%9C%EC%98%88%EB%82%98'" />
+            더 알아보기 </button>
+            <br/><br/><br/>
+        </div>
+        
+        <div >
+            <p class="bg-light text-dark">
+                <br> &nbsp;&nbsp; © 2021. Min-GyeongWon_20160958 All Rights Reserved. <br> <br>
+            </p>
+        </div>
+          
+      </div>
+      
+
+</body>
+</html>
