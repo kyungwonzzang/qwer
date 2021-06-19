@@ -1,11 +1,16 @@
 from types import MethodDescriptorType
 from flask import Flask, request, render_template, session, redirect
 from werkzeug.utils import redirect
-from func import ck_idpw # 내가 만든 id pw 체크함수
 import db
 
 app = Flask(__name__)
 app.secret_key = b'aaa!111/'
+
+def ck_idpw(ret):
+    if ret != None:
+        return render_template ('/')
+    else:
+        return render_template ('/loginfail')
 
 @app.route('/')
 def main():
@@ -65,7 +70,7 @@ def duck():
     # if 'user' in session:    
     #     return render_template('duck.html')
     if 'user' in session:
-        return '여기는 회원만'
+        return render_template('duck.html')
     else:
         return redirect('/login') # 페이지 강제 이동
 
