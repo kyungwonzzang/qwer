@@ -8,9 +8,9 @@ app.secret_key = b'aaa!111/'
 
 def ck_idpw(ret):
     if ret != None:
-        return render_template ('/')
+        return redirect('/loginsuccess')
     else:
-        return render_template ('/loginfail')
+        return redirect('/loginfail')
 
 @app.route('/')
 def main():
@@ -21,17 +21,6 @@ def main():
 def logout():
     session.pop('user', None)
     return redirect('/')
-
-@app.route('/action_page', methods=['GET', 'POST'])
-def action_page():
-    if request.method == 'GET':
-        return '나는 액션 페이지야'
-    else:
-        search = request.form['search']
-        return '''당신은 "{}"로 검색을 했습니다.</br>
-        결과를 보여드리겠습니다. 잠시만 기다려주세요.</br>
-        리스트 쫙~~~~
-        '''.format(search)
 
 @app.route('/join')
 def join():
@@ -49,7 +38,7 @@ def join_action():
         print(userid, pwd, name, phone)
         # 디비에 데이터 넣기
         db.insert_user(userid, pwd, name, phone)
-        return render_template('joinsuccess.html')
+        return redirect('/loginsuccess')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -63,12 +52,18 @@ def login():
         ret = db.get_idpw(userid, pwd)
         if ret != None:
             session['user'] = ret[3] # 로그인 처리
-        return ck_idpw(ret)
+            return ck_idpw(ret)
+
+@app.route('/loginsuccess')
+def loginsucess():
+    return render_template('loginsuccess.html')
+
+@app.route('/loginfail')
+def loginfail():
+    return render_template('loginfail.html')
 
 @app.route('/duck')
 def duck():
-    # if 'user' in session:    
-    #     return render_template('duck.html')
     if 'user' in session:
         return render_template('duck.html')
     else:
@@ -99,5 +94,5 @@ def joyuriz2():
 def joyuriz3():
     return render_template('joyuriz3.html')
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -8,9 +8,9 @@ app.secret_key = b'aaa!111/'
 
 def ck_idpw(ret):
     if ret != None:
-        return render_template ('loginsuccess.html')
+        return redirect('/loginsuccess')
     else:
-        return render_template ('loginfail.html')
+        return redirect('/loginfail')
 
 @app.route('/')
 def main():
@@ -38,7 +38,7 @@ def join_action():
         print(userid, pwd, name, phone)
         # 디비에 데이터 넣기
         db.insert_user(userid, pwd, name, phone)
-        return render_template('joinsuccess.html')
+        return redirect('/loginsuccess')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -52,12 +52,18 @@ def login():
         ret = db.get_idpw(userid, pwd)
         if ret != None:
             session['user'] = ret[3] # 로그인 처리
-        return ck_idpw(ret)
+            return ck_idpw(ret)
+
+@app.route('/loginsuccess')
+def loginsucess():
+    return render_template('loginsuccess.html')
+
+@app.route('/loginfail')
+def loginfail():
+    return render_template('loginfail.html')
 
 @app.route('/duck')
 def duck():
-    # if 'user' in session:    
-    #     return render_template('duck.html')
     if 'user' in session:
         return render_template('duck.html')
     else:

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>오리 Main</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/duck">회원전용</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ipduck">입Duck</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/joyuriz">조유리즈</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      조유리즈 멤버
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/joyuriz1">최예나</a>
+                      <a class="dropdown-item" href="/joyuriz2">김채원</a>
+                      <a class="dropdown-item" href="/joyuriz3">조유리</a>
+                    </div>
+                </li>      
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="/">오리 &nbsp;<img src={{ url_for('static', filename='img/homeyena1.png') }} width="50" height="50">&nbsp;예나</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/join">회원가입</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="alert alert-success">
+      <strong>로그인 성공 !</strong>&nbsp;&nbsp;&nbsp;
+    </div>
+
+      <div class="mx-auto order-0 ;" style="text-align:center;">
+
+        <div id="demo" class="carousel slide bg-dark" data-ride="carousel">
+
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+          
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src={{ url_for('static', filename='img/yena1.png') }} height="450" alt="yena1">
+              </div>
+              <div class="carousel-item">
+                <img src={{ url_for('static', filename='img/yena2.jpg') }} height="450" alt="yena1">
+              </div>
+              <div class="carousel-item">
+                <img src={{ url_for('static', filename='img/yena3.jpg') }} height="450" alt="yena1">
+              </div>
+            </div>
+          
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+
+        <div class="bg-dark">
+            <table align="center" height="200" class = "text-white">
+                <thead>
+                    <th>
+                        <br/>
+                        <h3> 오리 사진전 </h3>
+                        <br/>
+                    </th>
+                </thead>
+            </table>
+        </div>
+
+        <div style="background-color: #6bff72;">
+            <table align="center" height="50" class = "text-dark">
+                <tbody>
+                    <td>
+                        <br/>
+                        <form method="get" action="http://search.naver.com/search.naver">
+                            <div class="for-group">
+                                <font size="4">NAVER </font>&nbsp;
+                                <input name="naver">&nbsp;
+                                <input type="submit" value="Search">
+                            </div>
+                       </form>
+                        <br/>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="background-color: #e4e4e4;">
+            <table align="center" height="50" class = "text-dark">
+                <tbody>
+                    <td>
+                        <br/>
+                        <form method="get" action="http://www.google.co.kr/search" target="_blank">
+                            <div class="for-group">
+                                <font size="4">Google </font>&nbsp;
+                                <input type=text name=q  />&nbsp;
+                                <input type=submit name=btnG value="Search" /> 
+                            </div>
+                       </form>
+                        <br/>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <table align="center" height="500">
+                <td>
+                    가나다라마바사
+                </td>
+            </table>
+        </div>
+
+        <div style="text-align: center;" >
+            <p class="bg-light text-dark">
+                <br> &nbsp;&nbsp; © 2021. Min-GyeongWon_20160958 All Rights Reserved. <br> <br>
+            </p>
+          </div>
+
+</body>
+
+
+</html>
